@@ -26,31 +26,26 @@ End the program and close the output image windows.
 
 # To Read,display the image
 import cv2
-image_1=cv2.imread("pic_1.PNG")
-image_2=cv2.imread("pic_2.PNG")
-cv2.imshow("pic_1",image_1)
-cv2.waitKey(0)
-cv2.imshow("pic_2",image_2)
+image=cv2.imread("levi.jpg")
+cv2.imshow("image",image)
 cv2.waitKey(0)
 
 # To write the image
-cv2.imwrite("pic_1",image_1)
-cv2.imwrite("pic_2",image_2
+cv2.imwrite("image2.jpg", image)
 
 # Find the shape of the Image
-print(image_1.shape)
-print(image_2.shape)
+print(image.shape)
 
 # To access rows and columns
 for i in range(70,90):
 for j in range(110,170):
-image_2[i][j]=[0,0,0]
-cv2.imshow("pic_2",image_2)
+image[i][j]=[0,0,0]
+cv2.imshow("image",image)
 cv2.waitKey(0)
 
 # To cut and paste portion of image
-image_2[70:90,110:175]=image_1[70:90,110:175]
-cv2.imshow("pic_2",image_2)
+image[70:90,110:175]=image[70:90,110:175]
+cv2.imshow("image",image)
 cv2.waitKey(0)
 ```
 
